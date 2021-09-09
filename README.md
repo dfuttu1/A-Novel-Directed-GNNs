@@ -58,7 +58,7 @@ python ./code/train_node.py --gpu-no 0 --dataset amazon_photo --epochs 500 --ear
 
 ### Graph-level task
 ```shell
-python ./code/train_graph.py --gpu-no 0 --model AGNN_share
+python ./code/train_graph.py --gpu-no 0
 ```
 
 ## Results
