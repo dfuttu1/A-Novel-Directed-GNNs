@@ -15,11 +15,11 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from tqdm import tqdm
 from run import sparse_mx_to_torch_sparse_tensor
 
-from model_graph import AGNN_share, GCN, SGC, APPNP_Net, GrapgSage, GAT, DiGCN
+from model_graph import OurModel_share, GCN, SGC, APPNP_Net, GrapgSage, GAT, DiGCN
 from datasets import load_ENAS_data, load_BN_data
 from utiles import load_module_state
 
-m='DiGCN' # choice = ['AGNN_share', 'GCN', 'SGC', 'APPNP_Net', 'GrapgSage', 'GAT', 'DiGCN']
+m='OurModel_share' # choice = ['OurModel_share', 'GCN', 'SGC', 'APPNP_Net', 'GrapgSage', 'GAT', 'DiGCN']
 d ='final_structures6' # choice = ['final_structures6', 'asia_200k']
 
 
@@ -39,7 +39,7 @@ parser.add_argument('--reprocess', action='store_true', default=False,
 parser.add_argument('--keep-old', action='store_true', default=True,
                     help='if True, do not remove any old data in the result folder')
 # model settings
-parser.add_argument('--model', default='DiGCN', help='model to use: AGNN_share, GCN, SGC, APPNP_Net, GrapgSage, GAT, DiGCN')
+parser.add_argument('--model', default='OurModel_share', help='model to use: OurModel_share, GCN, SGC, APPNP_Net, GrapgSage, GAT, DiGCN')
 parser.add_argument('--adj-type', default='ib' if m == 'DiGCN' else 'di', help='ib is just used to the baseline model DiGCN')
 parser.add_argument('--load-latest-model', action='store_true', default=True,
                     help='whether to load latest_model.pth')
@@ -101,7 +101,7 @@ if args.model == 'DiGCN':
 else:
     pkl_name = os.path.join(pkl_name, args.data_name + '.pkl')
 
-if args.model == 'AGNN' or args.model == 'AGNN_share':
+if args.model == 'OurModel_share' or args.model == 'OurModel_share':
     args.res_dir = os.path.join(args.res_dir, '{}{}'.format(args.data_name, args.save_appendix+'+'+args.fusion_function+'+'+args.readout_function))
 else:
     args.res_dir = os.path.join(args.res_dir, '{}{}'.format(args.data_name, args.save_appendix+'+'+args.readout_function))
