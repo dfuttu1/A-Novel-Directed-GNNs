@@ -4,7 +4,7 @@ from torch_geometric.utils import add_self_loops
 from torch_scatter import scatter_add
 
 
-############################# AGNN
+############################# Our model
 def get_directed_adj(edge_index, num_nodes, dtype, edge_weight=None):
     if edge_weight is None:
         edge_weight = torch.ones((edge_index.size(1),), dtype=dtype,
