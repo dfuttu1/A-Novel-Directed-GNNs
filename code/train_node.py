@@ -30,20 +30,20 @@ parser.add_argument('--mask', type=bool, help="just regularize the train example
 parser.add_argument('--share_parameters', type=bool, help="the networks of two embeddings share parameters", default=True)
 parser.add_argument('--recache', action="store_true", help="clean up the old adj data", default=True)
 parser.add_argument('--normalize-features', type=bool, default=True)
-parser.add_argument('--adj-type', type=str, help="'di' is the default adj type of AGNN", default='di')
+parser.add_argument('--adj-type', type=str, help="'di' is the default adj type of Our Model", default='di')
 
 args = parser.parse_args()
 
 
-class AGNN_share(torch.nn.Module):
+class OurModel_share(torch.nn.Module):
     '''
-    The AGNN method we proposed, can capture the asymmetric structure of directed graph, 
+    The method we proposed, can capture the asymmetric structure of directed graph, 
     by modeling the different roles of receiving and sending information, 
     and obtaining two embeddings of one node. Note that to reduce computation, 
     we let the incoming and outgoing maps share parameters.
     '''
     def __init__(self, dataset, cached=False):
-        super(AGNN_share, self).__init__()
+        super(OurModel_share, self).__init__()
         self.conv1_1 = GCNConv(dataset.num_features, args.hidden)
         self.conv1_2 = GCNConv(dataset.num_features, args.hidden)
 
@@ -116,9 +116,9 @@ class AGNN_share(torch.nn.Module):
 
         return out, x_1, x_2
 
-class AGNN(torch.nn.Module):
+class OurModel(torch.nn.Module):
     def __init__(self, dataset, cached=False):
-        super(AGNN, self).__init__()
+        super(OurModel, self).__init__()
         self.conv1_1 = GCNConv(dataset.num_features, args.hidden)
         self.conv1_2 = GCNConv(dataset.num_features, args.hidden)
 
@@ -229,9 +229,9 @@ class GCN(torch.nn.Module):
 
 def run_digcn(dataset, name, save_path):
     if args.share_parameters:
-        model = AGNN_share(dataset)
+        model = OurModel_share(dataset)
     else:
-        model = AGNN(dataset)
+        model = OurModel(dataset)
     val_loss, val_closs, val_regloss, test_acc, test_std, time = run(dataset, name, args.gpu_no, model, args.runs, args.epochs, args.lam, args.mask, args.lr,
                                              args.weight_decay,
                                              args.early_stopping, save_path)
