@@ -4,9 +4,9 @@ import torch.nn.functional as F
 from utiles import DIGCNConv
 from torch_geometric.nn import GCNConv, SGConv, APPNP, SAGEConv, GATConv
 
-class AGNN(torch.nn.Module):
+class OurModel(torch.nn.Module):
     def __init__(self, in_dim=6, num_layer=2, hidden=64, out_dim=1, dropout_rate=0.5, fusion='sum',  readout='sum', cached=True):
-        super(AGNN, self).__init__()
+        super(OurModel, self).__init__()
         self.num_layer = num_layer
         self.dropout = dropout_rate
         self.fusion = fusion
@@ -94,9 +94,9 @@ class AGNN(torch.nn.Module):
 
         return out, x_1, x_2
 
-class AGNN_share(torch.nn.Module):
+class OurModel_share(torch.nn.Module):
     def __init__(self, in_dim=6, num_layer=2, hidden=64, out_dim=1, dropout_rate=0.5, fusion='sum',  readout='sum', cached=True):
-        super(AGNN_share, self).__init__()
+        super(OurModel_share, self).__init__()
         self.num_layer = num_layer
         self.dropout = dropout_rate
         self.fusion = fusion
