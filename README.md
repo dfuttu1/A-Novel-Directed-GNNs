@@ -66,7 +66,7 @@ python ./code/train_graph.py --gpu-no 0
 ```
 ## Results
 <div  align="center">    
-<center><img src="images/results.png" alt="results" width=60% align=center />
+<img src="images/results.png" alt="results" width=60% align=center />
 </div>
 Overall accuracy comparison on node classification between our model without regularization and with regularization and seven existing methods. The best results are highlighted in boldface and the second in Italian font.
 
