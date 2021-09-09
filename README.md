@@ -1,4 +1,4 @@
-# A noval method of directed graph neural networks (under review)
+# A noval method of directed graph neural networks (under double-blind review)
 
 This is the PyTorch implementation of a noval directed graph neural networks, where capture the asymmetric structure of directed graph by modeling the different roles of receiving and sending.
 
