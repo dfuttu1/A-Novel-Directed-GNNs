@@ -3,7 +3,7 @@
 This is the PyTorch implementation of a noval directed graph neural networks, where capture the asymmetric structure of directed graph by modeling the different roles of receiving and sending.
 
 <center> Illustration of the outgoing embedding and the incoming embedding over a four-node toy graph. </center>
-<img src="images/inoutembedding.png" alt="inOutEmbedding" width=60% #pic_center />
+<img src="images/inoutembedding.png" alt="inOutEmbedding" width=60% align=center />
 
 ## Requirements
 
