@@ -26,11 +26,14 @@ Secondly, you need to install [pytorch](https://pytorch.org/) by
 conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.2 -c pytorch
 ```
 
-Thirdly, you need to install [torch-scatter](https://github.com/rusty1s/pytorch_scatter) and [torch-sparse](https://github.com/rusty1s/pytorch_sparse) manually by
+Thirdly, you need to download [torch-scatter](https://github.com/rusty1s/pytorch_scatter) and [torch-sparse](https://github.com/rusty1s/pytorch_sparse) manually in the url
 
 ```url
 https://data.pyg.org/whl/torch-1.5.0%2Bcu102/torch_scatter-2.0.5-cp37-cp37m-linux_x86_64.whl
 https://data.pyg.org/whl/torch-1.5.0%2Bcu102/torch_sparse-0.6.7-cp37-cp37m-linux_x86_64.whl
+```
+And install them by
+```shell
 pip install ..
 ```
 You can also install these two packages follow their official instruction.
