@@ -61,10 +61,6 @@ python ./code/train_node.py --gpu-no 0 --dataset amazon_photo --epochs 500 --ear
 python ./code/train_graph.py --gpu-no 0
 ```
 
-## Results
-<center><img src="images/results.png" alt="results" style="zoom:100%;" /></center>
-Overall accuracy comparison on node classification between our AGNN without regularization and AGNN with regularization and seven existing methods. The best results are highlighted in boldface and the second in Italian font.
-
 
 ## Acknowledgements
 The template is borrowed from Pytorch-Geometric benchmark suite. We thank the authors of following works for opening source their excellent codes, 
