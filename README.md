@@ -13,11 +13,11 @@ Illustration of the outgoing embedding and the incoming embedding over a four-no
 
 Our project is developed using Python 3.7, PyTorch 1.5.0 with CUDA10.2. We recommend you to use [anaconda](https://www.anaconda.com/) for dependency configuration.
 
-Firstly, you need to create an anaconda environment called ```DGNN``` by
+Firstly, you need to create an anaconda environment called ```NovelGNN``` by
 
 ```shell
-conda create -n DGNN python=3.7
-conda activate DGNN
+conda create -n NovelGNN python=3.7
+conda activate NovelGNN
 ```
 
 Secondly, you need to install pytorch by
