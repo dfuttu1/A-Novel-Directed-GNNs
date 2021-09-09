@@ -1,6 +1,6 @@
 # A noval graph neural networks for directed graph (under double-blind review)
 
-This is the PyTorch implementation of the proposed noval directed graph neural networks, which capture the asymmetric structure of directed graph by modeling the different roles of receiving and sending.
+This is the PyTorch implementation of the proposed noval directed graph neural networks, which captures the asymmetric structure of directed graph by modeling the different roles of receiving and sending.
 
 <div  align="center">    
 Illustration of the outgoing embedding and the incoming embedding over a four-node toy graph.
