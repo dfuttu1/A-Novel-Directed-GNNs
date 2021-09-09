@@ -20,7 +20,7 @@ conda create -n NovelGNN python=3.7
 conda activate NovelGNN
 ```
 
-Secondly, you need to install pytorch by
+Secondly, you need to install [pytorch](https://pytorch.org/) by
 
 ```shell
 conda install pytorch==1.5.0 torchvision==0.6.0 cudatoolkit=10.2 -c pytorch
