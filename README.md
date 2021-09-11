@@ -1,4 +1,4 @@
-# A noval graph neural networks for directed graph (under double-blind review)
+# A Noval Graph Neural Networks for Directed Graph (under double-blind review)
 
 This is the PyTorch implementation of the proposed noval directed graph neural networks, which captures the asymmetric structure of directed graph by modeling the different roles of receiving and sending.
 
